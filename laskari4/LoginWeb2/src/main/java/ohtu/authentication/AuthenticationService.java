@@ -45,6 +45,15 @@ public class AuthenticationService {
         // validity check of username and password
         // kaikki oleellinen lienee kuitenkin hoidettu UserCreation.java:ssa olevien
         // validointien avulla eli täällä ei tarvitse tehdä mitään
+        String PASSWORD_PATTERN = 
+              "((?=.*[@#$%\\d])(?=.*[a-zA-Z]).{8,20})";
+
+        if(username.length()<3)
+            return true;
+        if(password.length()<8)
+            return true;
+        if(!password.matches(PASSWORD_PATTERN))
+            return true;
 
         return false;
     }
