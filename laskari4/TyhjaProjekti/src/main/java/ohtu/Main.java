@@ -8,7 +8,7 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.io.IOUtils;   
 public class Main {
     public static void main(String[] args) throws IOException {
-        String studentNr = "13696430";
+        String studentNr = "12345678";
         if ( args.length>0) {
             studentNr = args[0];
         }           
